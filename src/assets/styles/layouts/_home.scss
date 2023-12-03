@@ -12,6 +12,46 @@ body {
   }
 }
 
+.lista-form {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+form li>* {
+  box-sizing: content-box;
+}
+
+form li {
+  display: inline;
+  flex-basis: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+form li label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  background-color: #ccc;
+  height: 40px;
+  align-items: center;
+  z-index: 10;
+  width: 100px;
+}
+
+
+form li input[type="text"] {
+  position: absolute;
+  z-index: 9;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+
 .section:has(>ol) {
   border-top: thin solid gray;
   border-bottom: thin solid gray;

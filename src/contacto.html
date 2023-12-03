@@ -36,31 +36,35 @@
   <main class="main main--margen">
     <h1>Contacte con nosotros</h1>
     <form name="contact" method="POST" data-netlify="true">
-      <p>
-        <label>Nombre: <input type="text" name="name" /></label>
-      </p>
-      <p>
-        <label>Email: <input type="email" name="email" /></label>
-      </p>
-      <p>
-        <label>Motivo de consulta: <select name="consulta">
+      <ul class="lista-form">
+        <li>
+          <label for="nombreid">Nombre: </label><input type="text" name="name" id="nombreid">
+        </li>
+        <li>
+          <label for="emailid">Email: </label><input type="email" name="email" id="emailid">
+        </li>
+        <li>
+          <label for="consulaid">Motivo de consulta: </label>
+          <select name="consulta" id="consultaid">
             <option value="reclamacion">Reclamación</option>
             <option value="informacion">Información</option>
             <option value="informacion">Compra</option>
             <option value="informacion">Otros...</option>
-          </select></label>
-      </p>
-      <p>
-        <label>Mensaje: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <input type="checkbox" name="consentimiento" id="consentimientoid"><label for="consentimientoid">Estoy de
-          acuerdo con las <a href="#" target="_blank">políticas de privacidad</a> de la empresa y autorizo
-          a esta a tratar mis datos. </label>
-      </p>
-      <p>
-        <button type="submit">Enviar</button>
-      </p>
+          </select>
+        </li>
+        <li>
+          <label for="messageid">Mensaje: </label>
+          <textarea name="message" id="messageid"></textarea>
+        </li>
+        <li>
+          <input type="checkbox" name="consentimiento" id="consentimientoid"><label for="consentimientoid">Estoy de
+            acuerdo con las <a href="#" target="_blank">políticas de privacidad</a> de la empresa y autorizo
+            a esta a tratar mis datos. </label>
+        </li>
+        <li>
+          <button type="submit">Enviar</button>
+        </li>
+      </ul>
     </form>
 
 

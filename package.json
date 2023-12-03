@@ -9,6 +9,7 @@
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
+    "format": "prettier . --write",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "web": "dist/index.html",
@@ -41,7 +42,13 @@
     "parcel": "^2.9.3",
     "postcss-preset-env": "^9.1.1",
     "posthtml-include": "^1.7.4",
+    "prettier": "^3.1.0",
     "rimraf": "^5.0.1",
-    "sharp": "0.31.1"
+    "sharp": "0.31.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-scss": "^5.3.1"
   }
 }

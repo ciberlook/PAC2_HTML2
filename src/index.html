@@ -1,27 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <!-- do not remove this line! -->
+    <title>
+      Asociación X: Actividades e información sobre la liga de tenis
+    </title>
+    <link rel="icon" type="image/svg" href="./assets/images/logo.svg" />
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  <body class="body body--grid">
+    <header class="header header--portada">
+      <figure class="header__logo">
+        <a href="#"
+          ><img
+            src="./assets/images/logo.svg"
+            width="75"
+            height="75"
+            alt="logo del club de tenis"
+        /></a>
+      </figure>
+      <nav>
+        <button class="sandwich">
+          <span class="sandwich__bar1"></span>
+          <span class="sandwich__bar2"></span>
+          <span class="sandwich__bar3"></span>
+        </button>
+        <ul class="menu menu__principal menu--hidden">
+          <li class="menu__item menu__item--activo"><a href="./index.html">Inicio</a></li>
+          <li class="menu__item "><a href="./participantes.html">Participantes</a></li>
+          <li class="menu__item"><a href="./actividades.html">Actividades</a></li>
+          <li class="menu__item"><a href="#">Enlace 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main main--portada">
+      <div>
+        <h1>Tennis club name or catchy phrase here</h1>
+        <p>This will be a creative front page poster made with CSS Grid.</p>
+        <p>Maybe include links here?</p>
+      </div>
+    </main>
+    <footer class="footer footer--portada">
+      <p>This is the footer. Should it include contact information?</p>
+      <div>
+        <figure>
+          <a href=""
+            ><img
+              src="./assets/images/logo.svg"
+              width="75"
+              height="75"
+              alt="logo del club de tenis"
+          /></a>
+        </figure>
+        <ul class="menu">
+          <li class="menu__item"><a href="#">Enlace 1</a></li>
+          <li class="menu__item"><a href="#">Enlace 2</a></li>
+          <li class="menu__item"><a href="#">Enlace 3</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
   </body>
 </html>

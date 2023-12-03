@@ -8,13 +8,14 @@
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
   <!-- do not remove this line! -->
   <title>
-    Asociación X: Actividades e información sobre la liga de tenis
+    Asociación X: Formulario de contacto
   </title>
   <link rel="icon" type="image/svg" href="./assets/images/logo.svg" />
 </head>
 
-<body class="body body--grid">
-  <header class="header header--portada">
+<body>
+
+  <header class="header">
     <figure class="header__logo">
       <a href="#"><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
     </figure>
@@ -25,26 +26,52 @@
         <span class="sandwich__bar3"></span>
       </button>
       <ul class="menu menu__principal menu--hidden">
-        <li class="menu__item menu__item--activo"><a href="./index.html">Inicio</a></li>
-        <li class="menu__item "><a href="./participantes.html">Participantes</a></li>
+        <li class="menu__item"><a href="./index.html">Inicio</a></li>
+        <li class="menu__item"><a href="./participantes.html">Participantes</a></li>
         <li class="menu__item"><a href="./actividades.html">Actividades</a></li>
-        <li class="menu__item"><a href="./contacto.html">Contacto</a></li>
+        <li class="menu__item menu__item--activo"><a href="#">Contacto</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--portada">
-    <div>
-      <h1>Tennis club name or catchy phrase here</h1>
-      <p>This will be a creative front page poster made with CSS Grid.</p>
-      <p>Maybe include links here?</p>
-    </div>
+  <main class="main main--margen">
+    <h1>Contacte con nosotros</h1>
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Nombre: <input type="text" name="name" /></label>
+      </p>
+      <p>
+        <label>Email: <input type="email" name="email" /></label>
+      </p>
+      <p>
+        <label>Motivo de consulta: <select name="consulta">
+            <option value="reclamacion">Reclamación</option>
+            <option value="informacion">Información</option>
+            <option value="informacion">Compra</option>
+            <option value="informacion">Otros...</option>
+          </select></label>
+      </p>
+      <p>
+        <label>Mensaje: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <input type="checkbox" name="consentimiento" id="consentimientoid"><label for="consentimientoid">Estoy de
+          acuerdo con las <a href="#" target="_blank">políticas de privacidad</a> de la empresa y autorizo
+          a esta a tratar mis datos. </label>
+      </p>
+      <p>
+        <button type="submit">Enviar</button>
+      </p>
+    </form>
+
+
   </main>
-  <footer class="footer footer--portada">
+  <footer class="footer">
     <p>This is the footer. Should it include contact information?</p>
     <div>
       <figure>
         <a href=""><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
       </figure>
+
       <ul class="menu">
         <li class="menu__item"><a href="#">Enlace 1</a></li>
         <li class="menu__item"><a href="#">Enlace 2</a></li>
@@ -52,6 +79,8 @@
       </ul>
     </div>
   </footer>
+
+
 
   <script type="module" src="./assets/scripts/main.js"></script>
   <!-- do not remove this line! -->

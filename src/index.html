@@ -11,6 +11,9 @@
     Asociación X: Actividades e información sobre la liga de tenis
   </title>
   <link rel="icon" type="image/svg" href="./assets/images/logo.svg" />
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/brands.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.css">
 </head>
 
 <body class="body body--grid">
@@ -25,30 +28,37 @@
         <span class="sandwich__bar3"></span>
       </button>
       <ul class="menu menu__principal menu--hidden">
-        <li class="menu__item menu__item--activo"><a href="./index.html">Inicio</a></li>
-        <li class="menu__item "><a href="./participantes.html">Participantes</a></li>
-        <li class="menu__item"><a href="./actividades.html">Actividades</a></li>
-        <li class="menu__item"><a href="./contacto.html">Contacto</a></li>
+        <li class="menu__item menu__item--activo"><a class="link-underline link-underline-opacity-0" href="./index.html">Inicio</a></li>
+        <li class="menu__item "><a  class="link-underline link-underline-opacity-0" href="./participantes.html">Participantes</a></li>
+        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./actividades.html">Actividades</a></li>
+        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
   <main class="main main--portada">
     <div>
-      <h1>Tennis club name or catchy phrase here</h1>
-      <p>This will be a creative front page poster made with CSS Grid.</p>
-      <p>Maybe include links here?</p>
+      <h1 class="display-1 text-light">El tenis, es tu pasión</h1>
+      <p class="lead text-white">Visita nuestra web. Encontrarás gente que comparta tu pasión por el tenis y acceso a las últimas noticas.</p>
+      <p class="lead text-white"><span class="etiqueta p-2"><a class="link-offset-2" href="./participantes.html">Ver Participantes</a></span></p>
     </div>
   </main>
   <footer class="footer footer--portada">
-    <p>This is the footer. Should it include contact information?</p>
+    <div>
+    <p><span class="fa-regular fa-copyright" title="copyright"></span> | Alberto Marín Mendoza </p>
+    <ul class="menu menu--gap">
+      <li><a href="#"><span class="fa-brands fa-facebook-f" title="Facebook"></span><span></span></a></li>
+      <li><a href="#"><span class="fa-brands fa-instagram" title="Instagram"></span><span></span></a></li>
+      <li><a href="#"><span class="fa-brands fa-x-twitter" title="Twitter"></span><span></span></a></li>
+    </ul>
+  </div>
     <div>
       <figure>
         <a href=""><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
       </figure>
       <ul class="menu">
-        <li class="menu__item"><a href="#">Enlace 1</a></li>
-        <li class="menu__item"><a href="#">Enlace 2</a></li>
-        <li class="menu__item"><a href="#">Enlace 3</a></li>
+        <li class="menu__item"><a href="#">Política de privacidad</a></li>
+        <li class="menu__item"><a href="#">Términos legales</a></li>
+        <li class="menu__item"><a href="#">Sobre nosotros</a></li>
       </ul>
     </div>
   </footer>

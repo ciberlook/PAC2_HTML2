@@ -3,6 +3,9 @@ body {
   padding: 0;
 }
 
+
+
+
 .section {
   max-width: 75%;
   margin: 0 auto;
@@ -16,41 +19,14 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-}
-
-form li>* {
-  box-sizing: content-box;
-}
-
-form li {
-  display: inline;
-  flex-basis: 50%;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-form li label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-flex;
-  background-color: #ccc;
-  height: 40px;
-  align-items: center;
-  z-index: 10;
-  width: 100px;
+  
 }
 
 
-form li input[type="text"] {
-  position: absolute;
-  z-index: 9;
-  height: 40px;
-  margin: 0;
-  padding: 0;
-}
+
+
+
+
 
 .section:has(>ol) {
   border-top: thin solid gray;
@@ -110,9 +86,11 @@ form li input[type="text"] {
 
 .img--rt {
   width: 75%;
-  height: auto;
-  display: block;
   margin: 0 auto;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0px -172px;
 }
 
 .figure--cabecera {
@@ -137,9 +115,9 @@ form li input[type="text"] {
   h1 {
 
     color: white;
-    font-size: 3em;
+    
     text-align: center;
-    text-shadow: 2px 2px 2px black;
+    
 
   }
 
@@ -164,8 +142,12 @@ form li input[type="text"] {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
+    max-height: 300px;
+    object-position: top;
   }
 
+ 
   @media (min-width: 970px) {
     .lista-participantes__item {
       box-sizing: content-box;
@@ -185,7 +167,7 @@ form li input[type="text"] {
   z-index: -1;
   width: 100vw;
   height: 75vh;
-  background-image: url(../images/soccer-1859046_1280.jpg);
+  background-image: url(../images/tennis-1381230_1280_1.jpg);
   top: 0;
   left: 0;
   display: flex;
@@ -214,25 +196,39 @@ form li input[type="text"] {
   margin: 0 auto;
 
   p {
-    margin: 1em auto;
+    
     max-width: 75%;
   }
 
+  img {
+    filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg) brightness(106%) contrast(82%);
+  }
+
+  div:first-child{
+      border-top: thin solid #dbdbdb;
+  }
+
   div {
-    border-top: thin solid #666;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
     width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
+    padding-top:1em;
 
     @media (min-width: 970px) {
       justify-content: space-between;
+
     }
   }
 }
 
+.etiqueta {
+  background-color: #d1d1dd9e;
+  backdrop-filter: blur(1px);
+  border-radius: 10px;
+}
 .footer--portada {
   position: absolute;
   bottom: 0;
@@ -248,9 +244,11 @@ header {
   display: flex;
 }
 
+
+
 header {
   justify-content: space-between;
-  border-bottom: thin solid #666;
+  border-bottom: thin solid #dbdbdb;
   width: 75%;
   margin: 0 auto;
 
@@ -267,6 +265,7 @@ header {
     img {
       width: 100%;
       height: 100%;
+      filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg) brightness(106%) contrast(82%);
     }
   }
 }
@@ -281,13 +280,19 @@ nav {
   list-style-type: none;
   padding: 0;
 
+  &.menu--gap{
+    gap:.6em;
+  }
+
   .menu__item {
     margin: 0 1em;
 
     &.menu__item--activo a {
-      color: red;
+      text-decoration: underline !important
     }
   }
+
+
 }
 
 .menu__principal {
@@ -301,10 +306,15 @@ nav {
   height: 100%;
   margin: 0;
   z-index: 98;
-  background-color: gray;
+  background-color: #d2d6ced3;
+  backdrop-filter: blur(5px);
 
   .menu__item {
     margin: 1em 0;
+
+    a {
+      font-size: 3em;
+    }
   }
 
   @media (min-width: 970px) {
@@ -314,9 +324,15 @@ nav {
     width: inherit;
     height: inherit;
     background-color: inherit;
+    
+
 
     .menu__item {
       margin: 0 1em;
+
+      a{
+        font-size: inherit;
+      }
     }
 
     .main--portada {
@@ -345,7 +361,7 @@ nav {
   display: block;
   width: 40px;
   height: 5px;
-  background-color: black;
+  background-color: $link-color;
   margin: 6px 5px;
   transition: 0.4s;
 }
@@ -398,20 +414,21 @@ nav {
   }
 
   .main--portada {
-    grid-area: 1 / 2 / 3 / 2;
-    position: static;
+    grid-area: 1 / 2 / 4 / 2;
+    position: inherit;
     text-align: center;
-    align-self: center;
+    z-index: 1;
+      }
 
-
-  }
 
   .header--portada {
     grid-area: header;
+    position: inherit;
+    z-index: 2;
   }
 
   .footer--portada {
-    position: static;
+    position: inherit;
     grid-area: footer;
     transform: translateX(0%);
   }

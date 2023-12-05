@@ -3,14 +3,11 @@ body {
   padding: 0;
 }
 
-
-
-
 .section {
   max-width: 75%;
   margin: 0 auto;
 
-  @media (min-width:970px) {
+  @media (min-width: 970px) {
     max-width: 50%;
   }
 }
@@ -19,16 +16,9 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  
 }
 
-
-
-
-
-
-
-.section:has(>ol) {
+.section:has(> ol) {
   border-top: thin solid gray;
   border-bottom: thin solid gray;
 }
@@ -38,25 +28,22 @@ body {
   padding: 0;
   list-style-type: none;
   counter-reset: ol-counter;
-  position: relative
+  position: relative;
 }
-
-
 
 .lista-actividades li::before {
   counter-increment: ol-counter;
   content: counter(ol-counter);
-  color: red;
+  color: $secondary-corporate;
   position: absolute;
   left: -5ch;
   display: flex;
-  border: thin solid red;
+  border: thin solid $secondary-corporate;
   width: 30px;
   height: 30px;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-
 }
 
 .section--margin {
@@ -83,15 +70,22 @@ body {
 .aside {
   font-size: 2em;
 }
-
-.img--rt {
-  width: 75%;
-  margin: 0 auto;
-  display: block;
-  height: 300px;
-  object-fit: cover;
-  object-position: 0px -172px;
+@layer image { 
+  .img--rt {
+    container-name: img--rt;
+    container-type: inline-size;
+    img {
+      width: 75%;
+      margin: 0 auto;
+      display: block;
+      height: 300px;
+      object-fit: cover;
+      object-position: 0px -172px;
+    }
+  }
 }
+
+
 
 .figure--cabecera {
   margin: 0;
@@ -113,12 +107,9 @@ body {
   }
 
   h1 {
-
     color: white;
-    
-    text-align: center;
-    
 
+    text-align: center;
   }
 
   small {
@@ -128,11 +119,12 @@ body {
     font-size: 1em;
     text-align: center;
     text-shadow: 2px 2px 2px black;
-
   }
 }
 
 .lista-participantes {
+  container-name: lista-participantes;
+  container-type: inline-size;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -147,19 +139,7 @@ body {
     object-position: top;
   }
 
- 
-  @media (min-width: 970px) {
-    .lista-participantes__item {
-      box-sizing: content-box;
-      flex: 0 0 30%;
-      margin: 0 0.8em;
-
-      &.lista-participantes__item--quitar-margen {
-        margin-left: 0;
-      }
-    }
-  }
-
+  
 }
 
 .main--portada {
@@ -189,24 +169,25 @@ body {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  container-name: footer;
+  container-type: inline-size;
   width: 75%;
   margin: 0 auto;
 
   p {
-    
     max-width: 75%;
   }
 
   img {
-    filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg) brightness(106%) contrast(82%);
+    filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg)
+      brightness(106%) contrast(82%);
   }
 
-  div:first-child{
-      border-top: thin solid #dbdbdb;
+  div:first-child {
+    border-top: thin solid #dbdbdb;
   }
+
+  
 
   div {
     justify-content: space-between;
@@ -215,11 +196,10 @@ body {
     width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
-    padding-top:1em;
+    padding-top: 1em;
 
     @media (min-width: 970px) {
       justify-content: space-between;
-
     }
   }
 }
@@ -234,17 +214,13 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
 }
-
 
 .menu,
 nav,
 header {
   display: flex;
 }
-
-
 
 header {
   justify-content: space-between;
@@ -259,41 +235,58 @@ header {
   .header__logo {
     width: 100px;
     height: 100px;
-    margin: .5em;
+    margin: 0.5em;
     text-align: center;
 
     img {
       width: 100%;
       height: 100%;
-      filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg) brightness(106%) contrast(82%);
+      filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg)
+        brightness(106%) contrast(82%);
     }
   }
 }
-
-
 
 nav {
   align-items: center;
 }
 
-.menu {
-  list-style-type: none;
-  padding: 0;
 
-  &.menu--gap{
-    gap:.6em;
-  }
 
-  .menu__item {
-    margin: 0 1em;
 
-    &.menu__item--activo a {
-      text-decoration: underline !important
+ol :is(h1, h2, h3) {
+  color:$secondary-corporate;
+}
+
+
+
+
+
+
+
+
+
+
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  
+    &.menu--gap {
+      gap: 0.6em;
+    }
+  
+    .menu__item {
+      margin: 0 1em;
+      
+        &.menu__item--activo a {
+          text-decoration: underline !important;
+        }
+      
+      
     }
   }
 
 
-}
 
 .menu__principal {
   flex-direction: column;
@@ -324,13 +317,11 @@ nav {
     width: inherit;
     height: inherit;
     background-color: inherit;
-    
-
 
     .menu__item {
       margin: 0 1em;
 
-      a{
+      a {
         font-size: inherit;
       }
     }
@@ -394,9 +385,11 @@ nav {
   }
 }
 
-@media screen and (min-width: 375px) {}
+@media screen and (min-width: 375px) {
+}
 
-@media screen and (min-width: 970px) {}
+@media screen and (min-width: 970px) {
+}
 
 @supports (display: grid) {
   .body--grid {
@@ -406,10 +399,10 @@ nav {
     grid-template-columns: 0 1fr 1fr 0;
     grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas:
-      "header   header"
-      "portada  portada"
-      "portada  portada"
-      "footer  footer";
+      'header   header'
+      'portada  portada'
+      'portada  portada'
+      'footer  footer';
     height: 100vh;
   }
 
@@ -418,8 +411,7 @@ nav {
     position: inherit;
     text-align: center;
     z-index: 1;
-      }
-
+  }
 
   .header--portada {
     grid-area: header;
@@ -433,3 +425,61 @@ nav {
     transform: translateX(0%);
   }
 }
+
+
+@container footer (max-width: 304px) {
+  div {
+    font-size: .9em;
+    padding: 0;
+  }
+  div:first-child {
+    justify-content: center;
+    flex-direction: column;
+    border-top: none !important;
+  }
+  p{
+    text-align: center;
+  }
+  img {
+    width: 50px;
+    height: auto;
+    display: none;
+  }
+}
+
+@container lista-participantes (min-width:370px){
+  .lista-participantes__item {
+    box-sizing: content-box;
+    flex: 0 0 44%;
+    margin: 0 0.8em;
+
+    &.lista-participantes__item--quitar-margen {
+      margin-left: 0;
+    }
+  }
+}
+
+@container lista-participantes (min-width:727px){
+  .lista-participantes__item {
+    box-sizing: content-box;
+    flex: 0 0 30%;
+    margin: 0 0.8em;
+
+    &.lista-participantes__item--quitar-margen {
+      margin-left: 0;
+    }
+  }
+}
+
+@container img--rt (min-width:1100px){
+  img {
+    width: 62% ;
+    margin: 0 auto;
+    display: block;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0px -205px;
+  }
+}
+
+

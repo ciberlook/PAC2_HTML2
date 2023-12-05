@@ -1,104 +1,182 @@
 <!doctype html>
 
 <html lang="es">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width" >
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" >
+    <!-- do not remove this line! -->
+    <title>Asociación X: Formulario de contacto</title>
+    <link rel="icon" type="image/svg" href="./assets/images/logo.svg" >
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
+    >
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/brands.css"
+    >
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/solid.css"
+    >
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-  <!-- do not remove this line! -->
-  <title>
-    Asociación X: Formulario de contacto
-  </title>
-  <link rel="icon" type="image/svg" href="./assets/images/logo.svg" />
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/brands.css">
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.css">
-</head>
-
-<body>
-
-  <header class="header">
-    <figure class="header__logo">
-      <a href="./index.html"><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
-    </figure>
-    <nav>
-      <button class="sandwich">
-        <span class="sandwich__bar1"></span>
-        <span class="sandwich__bar2"></span>
-        <span class="sandwich__bar3"></span>
-      </button>
-      <ul class="menu menu__principal menu--hidden">
-        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./index.html">Inicio</a></li>
-        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./participantes.html">Participantes</a></li>
-        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./actividades.html">Actividades</a></li>
-        <li class="menu__item menu__item--activo"><a class="link-underline link-underline-opacity-0" href="./contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main main--margen">
-    <h1 class="h1 mt-3">Contacte con nosotros</h1>
-    <form name="contact" method="POST" data-netlify="true">
-
-      <ul class="lista-form row">
-        <li class="mb-3 col-md-6">
-          <label class="form-label" for="nombreid">Nombre: </label><input class="form-control" type="text" name="name" id="nombreid">
-        </li>
-        <li  class="mb-3 col-md-6">
-          <label class="form-label" for="emailid">Email: </label><input class="form-control" type="email" name="email" id="emailid">
-        </li>
-        <li  class="mb-3">
-          <label class="form-label" for="consulaid">Motivo de consulta: </label>
-          <select class="form-select" name="consulta" id="consultaid">
-            <option value="reclamacion">Reclamación</option>
-            <option value="informacion">Información</option>
-            <option value="informacion">Compra</option>
-            <option value="informacion">Otros...</option>
-          </select>
-        </li>
-        <li  class="mb-3">
-          <label class="form-label" for="messageid">Mensaje: </label>
-          <textarea class="form-control" name="message" id="messageid"></textarea>
-        </li>
-        <li  class="mb-3 form-check">
-          <input class="form-check-input" type="checkbox" name="consentimiento" id="consentimientoid"><label class="form-check-label" for="consentimientoid">Estoy de
-            acuerdo con las <a href="#" target="_blank">políticas de privacidad</a> de la empresa y autorizo
-            a esta a tratar mis datos. </label>
-        </li>
-        <li  class="mb-3">
-          <button class="btn btn-primary" type="submit">Enviar</button>
-        </li>
-      </ul>
-    </form>
-
-
-  </main>
-  <footer class="footer">
-    <div>
-      <p><span class="fa-regular fa-copyright" title="copyright"></span> | Alberto Marín Mendoza </p>
-      <ul class="menu menu--gap">
-        <li><a href="#"><span class="fa-brands fa-facebook-f" title="Facebook"></span><span></span></a></li>
-        <li><a href="#"><span class="fa-brands fa-instagram" title="Instagram"></span><span></span></a></li>
-        <li><a href="#"><span class="fa-brands fa-x-twitter" title="Twitter"></span><span></span></a></li>
-      </ul>
-    </div>
-    <div>
-      <figure>
-        <a href=""><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
+  <body>
+    <header class="header">
+      <figure class="header__logo">
+        <a href="./index.html"
+          ><img
+            src="./assets/images/logo.svg"
+            width="75"
+            height="75"
+            alt="logo del club de tenis"
+        ></a>
       </figure>
+      <nav>
+        <button class="sandwich">
+          <span class="sandwich__bar1"></span>
+          <span class="sandwich__bar2"></span>
+          <span class="sandwich__bar3"></span>
+        </button>
+        <ul class="menu menu__principal menu--hidden">
+          <li class="menu__item">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./participantes.html"
+              >Participantes</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./actividades.html"
+              >Actividades</a
+            >
+          </li>
+          <li class="menu__item menu__item--activo">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./contacto.html"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main main--margen">
+      <h1 class="h1 mt-3">Contacte con nosotros</h1>
+      <form name="contact" method="POST" data-netlify="true">
+        <ul class="lista-form row">
+          <li class="mb-3 col-md-6">
+            <label class="form-label" for="nombreid">Nombre: </label
+            ><input
+              class="form-control"
+              type="text"
+              name="name"
+              id="nombreid"
+            >
+          </li>
+          <li class="mb-3 col-md-6">
+            <label class="form-label" for="emailid">Email: </label
+            ><input
+              class="form-control"
+              type="email"
+              name="email"
+              id="emailid"
+            >
+          </li>
+          <li class="mb-3">
+            <label class="form-label" for="consultaid"
+              >Motivo de consulta:
+            </label>
+            <select class="form-select" name="consulta" id="consultaid">
+              <option value="reclamacion">Reclamación</option>
+              <option value="informacion">Información</option>
+              <option value="informacion">Compra</option>
+              <option value="informacion">Otros...</option>
+            </select>
+          </li>
+          <li class="mb-3">
+            <label class="form-label" for="messageid">Mensaje: </label>
+            <textarea
+              class="form-control"
+              name="message"
+              id="messageid"
+            ></textarea>
+          </li>
+          <li class="mb-3 form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="consentimiento"
+              id="consentimientoid"
+            ><label class="form-check-label" for="consentimientoid"
+              >Estoy de acuerdo con las
+              <a href="#" target="_blank">políticas de privacidad</a> de la
+              empresa y autorizo a esta a tratar mis datos.
+            </label>
+          </li>
+          <li class="mb-3">
+            <button class="btn btn-custom-primary" type="submit">Enviar</button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer class="footer">
+      <div>
+        <p>
+          <span class="fa-regular fa-copyright" title="copyright"></span> |
+          Alberto Marín Mendoza
+        </p>
+        <ul class="menu menu--gap">
+          <li>
+            <a href="#" title="Facebook"
+              ><span class="fa-brands fa-facebook-f" ></span
+              ><span></span
+            ></a>
+          </li>
+          <li>
+            <a href="#" title="Instagram"
+              ><span class="fa-brands fa-instagram" ></span
+              ><span></span
+            ></a>
+          </li>
+          <li>
+            <a href="#" title="Twitter"
+              ><span class="fa-brands fa-x-twitter" ></span
+              ><span></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <a href=""
+            ><img
+              src="./assets/images/logo.svg"
+              width="75"
+              height="75"
+              alt="logo del club de tenis"
+          ></a>
+        </figure>
 
-      <ul class="menu">
-        <li class="menu__item"><a href="#">Política de privacidad</a></li>
-        <li class="menu__item"><a href="#">Términos legales</a></li>
-        <li class="menu__item"><a href="#">Sobre nosotros</a></li>
-      </ul>
-    </div>
-  </footer>
+        <ul class="menu">
+          <li class="menu__item"><a href="#">Política de privacidad</a></li>
+          <li class="menu__item"><a href="#">Términos legales</a></li>
+          <li class="menu__item"><a href="#">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </footer>
 
-
-
-  <script type="module" src="./assets/scripts/main.js"></script>
-  <!-- do not remove this line! -->
-</body>
-
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
 </html>

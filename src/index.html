@@ -1,70 +1,140 @@
 <!doctype html>
 
 <html lang="es">
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width" >
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" >
+    <!-- do not remove this line! -->
+    <title>
+      Asociación X: Actividades e información sobre la liga de tenis
+    </title>
+    <link rel="icon" type="image/svg" href="./assets/images/logo.svg" >
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css"
+    >
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/brands.css"
+    >
+    <link
+      rel="stylesheet"
+      href="../node_modules/@fortawesome/fontawesome-free/css/solid.css"
+    >
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-  <!-- do not remove this line! -->
-  <title>
-    Asociación X: Actividades e información sobre la liga de tenis
-  </title>
-  <link rel="icon" type="image/svg" href="./assets/images/logo.svg" />
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/brands.css">
-  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/solid.css">
-</head>
-
-<body class="body body--grid">
-  <header class="header header--portada">
-    <figure class="header__logo">
-      <a href="./index.html"><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
-    </figure>
-    <nav>
-      <button class="sandwich">
-        <span class="sandwich__bar1"></span>
-        <span class="sandwich__bar2"></span>
-        <span class="sandwich__bar3"></span>
-      </button>
-      <ul class="menu menu__principal menu--hidden">
-        <li class="menu__item menu__item--activo"><a class="link-underline link-underline-opacity-0" href="./index.html">Inicio</a></li>
-        <li class="menu__item "><a  class="link-underline link-underline-opacity-0" href="./participantes.html">Participantes</a></li>
-        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./actividades.html">Actividades</a></li>
-        <li class="menu__item"><a class="link-underline link-underline-opacity-0" href="./contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main main--portada">
-    <div>
-      <h1 class="display-1 text-light">El tenis, es tu pasión</h1>
-      <p class="lead text-white">Visita nuestra web. Encontrarás gente que comparta tu pasión por el tenis y acceso a las últimas noticas.</p>
-      <p class="lead text-white"><span class="etiqueta p-2"><a class="link-offset-2" href="./participantes.html">Ver Participantes</a></span></p>
-    </div>
-  </main>
-  <footer class="footer footer--portada">
-    <div>
-    <p><span class="fa-regular fa-copyright" title="copyright"></span> | Alberto Marín Mendoza </p>
-    <ul class="menu menu--gap">
-      <li><a href="#"><span class="fa-brands fa-facebook-f" title="Facebook"></span><span></span></a></li>
-      <li><a href="#"><span class="fa-brands fa-instagram" title="Instagram"></span><span></span></a></li>
-      <li><a href="#"><span class="fa-brands fa-x-twitter" title="Twitter"></span><span></span></a></li>
-    </ul>
-  </div>
-    <div>
-      <figure>
-        <a href=""><img src="./assets/images/logo.svg" width="75" height="75" alt="logo del club de tenis" /></a>
+  <body class="body body--grid">
+    <header class="header header--portada">
+      <figure class="header__logo">
+        <a href="./index.html"
+          ><img
+            src="./assets/images/logo.svg"
+            width="75"
+            height="75"
+            alt="logo del club de tenis"
+        ></a>
       </figure>
-      <ul class="menu">
-        <li class="menu__item"><a href="#">Política de privacidad</a></li>
-        <li class="menu__item"><a href="#">Términos legales</a></li>
-        <li class="menu__item"><a href="#">Sobre nosotros</a></li>
-      </ul>
-    </div>
-  </footer>
+      <nav>
+        <button class="sandwich">
+          <span class="sandwich__bar1"></span>
+          <span class="sandwich__bar2"></span>
+          <span class="sandwich__bar3"></span>
+        </button>
+        <ul class="menu menu__principal menu--hidden">
+          <li class="menu__item menu__item--activo">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./participantes.html"
+              >Participantes</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./actividades.html"
+              >Actividades</a
+            >
+          </li>
+          <li class="menu__item">
+            <a
+              class="link-underline link-underline-opacity-0"
+              href="./contacto.html"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main main--portada">
+      <div>
+        <h1 class="display-1 text-light">El tenis, es tu pasión</h1>
+        <p class="lead text-white">
+          Visita nuestra web. Encontrarás gente que comparta tu pasión por el
+          tenis y acceso a las últimas noticas.
+        </p>
+        <p class="lead text-white">
+          <span class="etiqueta p-2"
+            ><a class="link-offset-2" href="./participantes.html"
+              >Ver Participantes</a
+            ></span
+          >
+        </p>
+      </div>
+    </main>
+    <footer class="footer footer--portada">
+      <div>
+        <p>
+          <span class="fa-regular fa-copyright" title="copyright"></span> |
+          Alberto Marín Mendoza
+        </p>
+        <ul class="menu menu--gap">
+          <li>
+            <a href="#" title="Facebook"
+              ><span class="fa-brands fa-facebook-f" ></span
+              ><span></span
+            ></a>
+          </li>
+          <li>
+            <a href="#" title="Instagram"
+              ><span class="fa-brands fa-instagram" ></span
+              ><span></span
+            ></a>
+          </li>
+          <li>
+            <a href="#" title="Twitter"
+              ><span class="fa-brands fa-x-twitter" ></span
+              ><span></span
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <a href=""
+            ><img
+              src="./assets/images/logo.svg"
+              width="75"
+              height="75"
+              alt="logo del club de tenis"
+          ></a>
+        </figure>
+        <ul class="menu">
+          <li class="menu__item"><a href="#">Política de privacidad</a></li>
+          <li class="menu__item"><a href="#">Términos legales</a></li>
+          <li class="menu__item"><a href="#">Sobre nosotros</a></li>
+        </ul>
+      </div>
+    </footer>
 
-  <script type="module" src="./assets/scripts/main.js"></script>
-  <!-- do not remove this line! -->
-</body>
-
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <!-- do not remove this line! -->
+  </body>
 </html>

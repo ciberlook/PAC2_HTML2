@@ -5,12 +5,20 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   'Segoe UI Symbol';
 $font-family-serif: 'Georgia', 'Times New Roman', serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$secondary-corporate: rgb(32, 53, 172);
+$primary-corporate: rgb(172, 78, 32);
+
 
 $mqMinWidth: 420px;
 
-$link-color:rgb(172,78,32);
-$link-hover-color:rgb(32, 53, 172);
-$link-visited-color:rgb(172,78,32);
+$link-color: rgb(172, 78, 32);
+$link-hover-color: rgb(32, 53, 172);
+$link-visited-color: rgb(172, 78, 32);
+
+
+$btn-color-text-emphasis: #fff;
+
+
+
+
+

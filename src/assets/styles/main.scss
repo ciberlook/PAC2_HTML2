@@ -9,6 +9,7 @@
 
 @import 'variables';
 
+
 /**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
@@ -28,5 +29,9 @@
 /**
  * Do NOT include anything else in this file!
  */
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import 'custom';
+@import 'bootstrap/scss/bootstrap.scss';
 
- @import'bootstrap/scss/bootstrap.scss';
+

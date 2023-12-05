@@ -1,11 +1,11 @@
 $custom-theme-color: (
-  "custom-primary": $primary-corporate,
-  "custom-secondary": $secondary-corporate,
-  "custom-success": #28a745,
-  "custom-info": #17a2b8,
-  "custom-warning": #ffc107,
-  "custom-danger": #dc3545,
-  "custom-light": #f8f9fa,
-  "custom-dark": #343a40
+  'custom-primary': $primary-corporate,
+  'custom-secondary': $secondary-corporate,
+  'custom-success': #28a745,
+  'custom-info': #17a2b8,
+  'custom-warning': #ffc107,
+  'custom-danger': #dc3545,
+  'custom-light': #f8f9fa,
+  'custom-dark': #343a40,
 );
 $theme-colors: map-merge($theme-colors, $custom-theme-color);

@@ -1,3 +1,8 @@
+/* ------------------------------------ *\
+  #DEFINICION-COLORES-PROPIOS
+\* ------------------------------------ */
+@use 'sass:map';
+
 $custom-theme-color: (
   'custom-primary': $primary-corporate,
   'custom-secondary': $secondary-corporate,
@@ -8,4 +13,4 @@ $custom-theme-color: (
   'custom-light': #f8f9fa,
   'custom-dark': #343a40,
 );
-$theme-colors: map-merge($theme-colors, $custom-theme-color);
+$theme-colors: map.merge($theme-colors, $custom-theme-color);

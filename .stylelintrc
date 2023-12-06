@@ -1,0 +1,31 @@
+{
+  "extends": ["stylelint-config-recommended-scss"],
+  "rules": {
+    "no-descending-specificity": true,
+    "no-invalid-double-slash-comments": true,
+    "block-no-empty": true,
+    "comment-no-empty": true,
+    "no-empty-source": true,
+    "comment-empty-line-before": "always",
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)((-|--|__)[a-z0-9]+)*$",
+      {
+        "message": "Expected Hyphen delimited & BEM-like Name style when using classes selectors"
+      }
+    ],
+    "selector-id-pattern": [
+      "^[a-z][a-z-0-9]*$",
+      {
+        "message": "Expected in lowercase and begining with a character"
+      }
+    ],
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      {
+        "ignoreShorthands": ["grid", "/grid/", "flex", "/flex/"]
+      }
+    ],
+    "shorthand-property-no-redundant-values": true,
+    "comment-whitespace-inside": "always"
+  }
+}

@@ -1,0 +1,57 @@
+/* ------------------------------------ *\
+#FORMATO GENERAL
+\* ------------------------------------ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  container-name: footer;
+  container-type: inline-size;
+  width: 75%;
+  margin: 0 auto;
+
+  p {
+    max-width: 75%;
+  }
+
+  img {
+    filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg)
+      brightness(106%) contrast(82%);
+  }
+
+  div {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding-top: 1em;
+
+    @media (min-width: 970px) {
+      justify-content: space-between;
+    }
+  }
+
+  div:first-child {
+    border-top: thin solid #dbdbdb;
+  }
+}
+
+.section {
+  max-width: 75%;
+  margin: 0 auto;
+
+  @media (min-width: 970px) {
+    max-width: 50%;
+  }
+}
+
+/* Este es el único componente que se formatea para la página Contactos. El resto de elementos usan bootstrap */
+.lista-form {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

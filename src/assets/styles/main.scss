@@ -22,8 +22,12 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-
+@import 'layouts/general';
+@import 'layouts/cabecera-menu';
+@import 'layouts/actividades';
 @import 'layouts/home';
+@import 'layouts/participantes';
+@import 'layouts/containers';
 
 /**
  * Do NOT include anything else in this file!

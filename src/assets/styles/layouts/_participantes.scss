@@ -1,0 +1,25 @@
+/* ------------------------------------ *\
+#PARTICIPANTES
+\* ------------------------------------ */
+.main--margen {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.lista-participantes {
+  container-name: lista-participantes;
+  container-type: inline-size;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 300px;
+    object-position: top;
+  }
+}

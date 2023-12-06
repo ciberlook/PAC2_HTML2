@@ -1,142 +1,29 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+/**
+ * CONTENIDO
+ *
+ * FORMATO GENERAL
+ * Global...............Formato aplicado a elementos que afectan a todas las páginas.
+ *
+ * CABECERA Y MENUL PRINCIPAL
+ * Logo y menu principal...............Estilo del logo y barra de navegación principal.
+ *
+ * PAGINAS
+ * * PAGINA ACTIVIDADES........Formato css de los elementos que componen la página Activiades.
+ * * PAGINA PORTADA..................Formato css de los elementos que componen la página Portada.
+ * * PAGINA PARTICIPANTES........Formato css de los elementos que componen la página Participantes. 
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * CONTAINERS
+ * Grid.................Estilo grid con la directiva @supports.
+ * Footer...............Estilo del footer con la directiva @container.
+ * Lista-participantes..Estilo de la lista de participantes con la directiva @container.
+ * Imagen...............Estilo de la imagen con la directiva @container y @layer.
+ *
+ */
 
-.section {
-  max-width: 75%;
-  margin: 0 auto;
-
-  @media (min-width: 970px) {
-    max-width: 50%;
-  }
-}
-
-.lista-form {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.section:has(> ol) {
-  border-top: thin solid gray;
-  border-bottom: thin solid gray;
-}
-
-.lista-actividades {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  counter-reset: ol-counter;
-  position: relative;
-}
-
-.lista-actividades li::before {
-  counter-increment: ol-counter;
-  content: counter(ol-counter);
-  color: $secondary-corporate;
-  position: absolute;
-  left: -5ch;
-  display: flex;
-  border: thin solid $secondary-corporate;
-  width: 30px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-}
-
-.section--margin {
-  margin: 2em auto;
-}
-
-.section--col {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  * {
-    flex: 0 0 100%;
-  }
-
-  @media (min-width: 970px) {
-    * {
-      flex: 0 0 48%;
-    }
-  }
-}
-
-.aside {
-  font-size: 2em;
-}
-@layer image {
-  .img--rt {
-    container-name: img--rt;
-    container-type: inline-size;
-    img {
-      width: 75%;
-      margin: 0 auto;
-      display: block;
-      height: 300px;
-      object-fit: cover;
-      object-position: 0px -172px;
-    }
-  }
-}
-
-.figure--cabecera {
-  margin: 0;
-  width: 100%;
-  height: auto;
-
-  .figure--cabecera__imagen {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .figure--cabecera__descripcion {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  h1 {
-    color: white;
-
-    text-align: center;
-  }
-
-  small {
-    display: block;
-    text-align: center;
-    color: white;
-    font-size: 1em;
-    text-shadow: 2px 2px 2px black;
-  }
-}
-
-.lista-participantes {
-  container-name: lista-participantes;
-  container-type: inline-size;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 300px;
-    object-position: top;
-  }
-}
-
+/* PÁGINA PRINCIPAL */
 .main--portada {
   position: absolute;
   z-index: -1;
@@ -158,50 +45,12 @@ body {
   }
 }
 
-.main--margen {
-  max-width: 75%;
-  margin: 0 auto;
-}
-
-.footer {
-  container-name: footer;
-  container-type: inline-size;
-  width: 75%;
-  margin: 0 auto;
-
-  p {
-    max-width: 75%;
-  }
-
-  img {
-    filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg)
-      brightness(106%) contrast(82%);
-  }
-
-  div {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    padding-top: 1em;
-
-    @media (min-width: 970px) {
-      justify-content: space-between;
-    }
-  }
-
-  div:first-child {
-    border-top: thin solid #dbdbdb;
-  }
-}
-
 .etiqueta {
   background-color: #d1d1dd9e;
   backdrop-filter: blur(1px);
   border-radius: 10px;
 }
+
 .footer--portada {
   position: absolute;
   bottom: 0;
@@ -209,176 +58,25 @@ body {
   transform: translateX(-50%);
 }
 
-.menu,
-nav,
-header {
-  display: flex;
-}
-
-header {
-  justify-content: space-between;
-  border-bottom: thin solid #dbdbdb;
-  width: 75%;
-  margin: 0 auto;
-
-  &.header--portada {
-    border-bottom: none;
-  }
-
-  .header__logo {
-    width: 100px;
-    height: 100px;
-    margin: 0.5em;
-    text-align: center;
-
-    img {
-      width: 100%;
-      height: 100%;
-      filter: invert(28%) sepia(33%) saturate(2694%) hue-rotate(352deg)
-        brightness(106%) contrast(82%);
-    }
-  }
-}
-
-nav {
-  align-items: center;
-}
-
-ol :is(h1, h2, h3) {
-  color: $secondary-corporate;
-}
-
-.menu__principal {
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  z-index: 98;
-  background-color: #d2d6ced3;
-  backdrop-filter: blur(5px);
-
-  .menu__item {
-    margin: 1em 0;
-
-    a {
-      font-size: 3em;
-    }
-  }
-
-  @media (min-width: 970px) {
-    position: static;
-    flex-direction: row;
-    justify-content: right;
-    width: inherit;
-    height: inherit;
-    background-color: inherit;
-
-    .menu__item {
-      margin: 0 1em;
-
-      a {
-        font-size: inherit;
-      }
-    }
-
-    .main--portada {
-      justify-content: end;
-    }
-
-    .footer div {
-      justify-content: space-between;
-    }
-  }
-}
-
-.menu {
-  list-style-type: none;
-  padding: 0;
-
-  &.menu--gap {
-    gap: 0.6em;
-  }
-
-  .menu__item {
-    margin: 0 1em;
-
-    &.menu__item--activo a {
-      text-decoration: underline !important;
-    }
-  }
-}
-
-.menu--hidden {
-  display: none;
-  visibility: hidden;
-
-  @media (min-width: 970px) {
-    display: inherit;
-    visibility: visible;
-  }
-}
-
-.sandwich__bar1,
-.sandwich__bar2,
-.sandwich__bar3 {
-  display: block;
-  width: 40px;
-  height: 5px;
-  background-color: $link-color;
-  margin: 6px 5px;
-  transition: 0.4s;
-}
-
-.change .sandwich__bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .sandwich__bar2 {
-  opacity: 0;
-}
-
-.change .sandwich__bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-}
-
-.sandwich {
-  width: 50px;
-  height: 50px;
-  z-index: 99;
-  padding: 0px;
-  margin: 0px;
-  border: none;
-  background-color: #0000;
-  cursor: pointer;
-
-  @media (min-width: 970px) {
-    display: none;
-    visibility: hidden;
-  }
-}
+/* PAGINA PRINCIPAL CON GRID */
 
 @supports (display: grid) {
   .body--grid {
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-columns: 0 1fr 1fr 0;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas:
-      'header   header'
-      'portada  portada'
-      'portada  portada'
-      'footer  footer';
+      'header'
+      'portada'
+      'portada'
+      'footer';
     height: 100vh;
   }
 
   .main--portada {
-    grid-area: 1 / 2 / 4 / 2;
+    grid-area: 1 / 1 / 4 / 2;
     position: inherit;
     text-align: center;
     z-index: 1;
@@ -394,60 +92,5 @@ ol :is(h1, h2, h3) {
     position: inherit;
     grid-area: footer;
     transform: translateX(0%);
-  }
-}
-
-@container footer (max-width: 304px) {
-  div {
-    font-size: 0.9em;
-    padding: 0;
-  }
-  div:first-child {
-    justify-content: center;
-    flex-direction: column;
-    border-top: none !important;
-  }
-  p {
-    text-align: center;
-  }
-  img {
-    width: 50px;
-    height: auto;
-    display: none;
-  }
-}
-
-@container lista-participantes (min-width:370px) {
-  .lista-participantes__item {
-    box-sizing: content-box;
-    flex: 0 0 44%;
-    margin: 0 0.8em;
-
-    &.lista-participantes__item--quitar-margen {
-      margin-left: 0;
-    }
-  }
-}
-
-@container lista-participantes (min-width:727px) {
-  .lista-participantes__item {
-    box-sizing: content-box;
-    flex: 0 0 30%;
-    margin: 0 0.8em;
-
-    &.lista-participantes__item--quitar-margen {
-      margin-left: 0;
-    }
-  }
-}
-
-@container img--rt (min-width:1100px) {
-  img {
-    width: 62%;
-    margin: 0 auto;
-    display: block;
-    height: 300px;
-    object-fit: cover;
-    object-position: 0px -205px;
   }
 }

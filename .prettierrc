@@ -1,0 +1,23 @@
+{
+  "singleQuote": false,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss"],
+      "options": {
+        "singleQuote": true,
+        "semi": true,
+        "bracketSpacing": true
+      }
+    },
+    {
+      "files": ["**/*.html"],
+      "options": {
+        "singleQuote": false,
+        "semi": false
+      }
+    }
+  ]
+}
